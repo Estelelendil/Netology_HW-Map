@@ -1,7 +1,9 @@
-export default function sum(items) {
-  let result = 0;
-  for (const item of items) {
-    result += item;
+class ErrorRepository {
+  constructor() {
+    const errMap = new Map([[100, ''], [200, ''], [300, ''], [400, ''], [500, '']]);
   }
-  return result;
+
+  translate(code) {
+    return errMap.get(code);
+  }
 }
